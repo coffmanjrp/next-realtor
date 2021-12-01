@@ -10,7 +10,7 @@ import noresult from '../assets/images/noresult.svg';
 const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
   const router = useRouter();
-  const propertiesHeading = router.query.purpose.toString().replace(/-/g, ' ');
+  const propertiesHeading = router.query.purpose?.toString().replace(/-/g, ' ');
 
   return (
     <Box>

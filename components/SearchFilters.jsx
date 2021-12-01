@@ -46,7 +46,9 @@ const SearchFilters = () => {
     const values = getFilterValues(filterValues);
 
     values.forEach((item) => {
-      query[item.name] = item.value;
+      if (item.value && filterValues?.[item.name]) {
+        query[item.name] = item.value;
+      }
     });
 
     router.push({ pathname: path, query });
@@ -77,7 +79,9 @@ const SearchFilters = () => {
           border="1px"
           borderColor="gray.200"
           mt={2}
-          onClick={() => setShowLocations(!showLocations)}
+          onClick={() =>
+            setShowLocations((prevShowLocation) => !prevShowLocation)
+          }
         >
           Search Location
         </Button>
