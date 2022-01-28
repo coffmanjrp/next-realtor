@@ -1,5 +1,5 @@
 {
-  "name": "next-real-estate-app",
+  "name": "next-realtor",
   "private": true,
   "scripts": {
     "dev": "next dev",

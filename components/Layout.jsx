@@ -6,7 +6,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Next Real Estate App</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Realtor</title>
       </Head>
       <Box maxW="1280px" m="auto">
         <header>
